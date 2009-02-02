@@ -1,5 +1,7 @@
 TODO list for piface package
 
+o write Makefile / ant script to automate build of the jar and copy it to inst/java
+
 o fix bug that makes R hang when quitting a menu and launching piface() again;
   upon closing the piface window (in ESS), the following message appears
   
