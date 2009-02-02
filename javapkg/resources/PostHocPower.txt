@@ -1,0 +1,57 @@
+Post hoc power 
+-------------- 
+
+I strongly recommend AGAINST post hoc power calculations.
+Power calculations are useful in planning a future study
+that has an adequate sample size; but power has no place
+in data analysis. For more information, see these two
+references in a refereed publication of the American
+Statistical Association:
+
+Hoenig, J.M. and Heisey, D.M. (2001), "The Abuse of Power:
+The Pervasive Fallacy of Power Calculations in Data
+Analysis," The American Statistician, 55, 19-24.
+
+Lenth, R.V. (2001), "Some Practical Considerations for
+Effective Sample Size Determination," The American
+Statistician, 55, 187-193.
+
+A simple explanation follows.  People are most often
+motivated to do post hoc power calculations when a data
+analysis results in a null hypothesis not being rejected.
+The question is then asked: "did that happen because the
+power is too low?" The answer to the question is YES.
+Always; no calculations are needed to know that.
+
+Consider a parallel situation: Subsequent to a big storm
+that dropped 18 inches of heavy, wet snow, you find that
+your snowblower just can't cut it.  So you go inside and
+say to your spouse, "do you suppose the snowblower failed
+because it isn't powerful enough?"  Well, duh!  What kind
+of calculations do you need to figure that one out?
+Similarly, post hoc power calculations do not add any
+information to an analysis of existing data.
+
+I suppose you could also ask whether your snowblower
+would have been powerful enough to tackle 6 inches of
+powder.  That could be interesting to try to solve, but
+it doesn't help you clear away the snow that confronts
+you.  Similarly, computing post hoc power for an effect
+size different from that observed is an empty exercise.
+
+What does make sense is to assess your snow-blowing needs
+BEFORE the storm hits.  Is my snowblower going to be
+powerful enough to handle the amounts of snow I'm likely
+to have to deal with? That is analogous to planning a
+statistical study: do your power calculations before the
+study is conducted.
+
+I know that, in spite of these clear and compelling
+arguments, I will receive e-mail questions asking for
+help with post hoc power. Sorry, but I will not help you
+do something that is wrong. Read this again, and read the
+papers I cited.
+
+Russ Lenth
+Department of Statistics
+The University of Iowa

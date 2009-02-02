@@ -1,0 +1,25 @@
+Piface graphics dialog help
+
+All of the numeric variables in the host
+dialog are available for simple interactive
+graphing.  Select the "y" and "x" variables from
+the drop-down lists and specify the range and
+increment for the "x" variable. Then click on
+"(Re)Draw" to obtain the graph.
+
+This will be a graph of the two variables, given
+the current values of the remaining variables.
+The graph is updated when there are actions in
+the Piface dialog.  If the "Persistent" box is
+checked, new curves are added to the current
+graph; otherwise the curve is replaced.
+
+If the "Show Data" button is pressed, a text
+window appears that lists the data for each
+curve, plus information about the values of the
+other variables. These data may be pasted into
+another application if a publication-quality
+graph is needed.
+
+You may have as many graphs going as you like;
+of course this can affect performance.

@@ -1,0 +1,62 @@
+Cohen's effect sizes
+--------------------
+
+Jacob Cohen has proposed effect-size measures for several
+statistical procedures, and has defined "small,"
+"medium," and "large" effect sizes accordingly.  These
+effect-size measures are standardized quantities, e.g. an
+absolute difference of means divided by the standard
+deviation.  They are quite popularly used in sample-size
+problems, because they are so easy to use; you don't have
+to think very hard to get an answer.
+
+And that's the rub. You don't have to think nearly enough!
+Planning a study always requires careful thought: what
+is the goal, how do we operationalize the research question,
+what do we measure and how, what study design is needed,
+what result would be of scientific importance, etc.
+None of those issues are addressed in specifying small, 
+medium, or large on a standardized scale.  If you really
+care about the scientific merits of your work, then you
+should not take this easy route.  And I certainly will not
+help you do it using my software.
+
+Suppose that a study involves measuring the thickness
+of fibers.  There are various instruments that 
+could be used to do that.  It makes sense that if an
+inaccurate instrument is used, you should have more
+observations in the experiment than if you use really
+accurate measurements.  However, using, say, a "medium"
+effect size in the planning, you get the SAME sample size
+regardless of whether you use a micrometer, caliper,
+or 6-inch plastic ruler.  
+
+That's because Cohen's measures are standardized.  Using
+a micrometer, a medium effect is perhaps a thousandth of
+an inch in absolute terms; whereas, using a ruler, a
+medium effect is perhaps an eighth of an inch. If a .01-
+inch difference in mean fiber thicknesses is considered
+to be important, then the plastic-ruler study is useless,
+while the micrometer study is over-powered and could be
+done adequately with fewer data.
+
+To do a responsible job of planning the study, you need
+to decide (1) what effect size, in ABSOLUTE units (e.g.,
+inches in the above example), is of importance from a
+scientific point of view; and (2) how variable are the
+measurements (e.g., accuracy of instrumentation).
+Typically, these are both hard questions. Question (1)
+requires a lot of thought and discussion. Question (2)
+requires some experience with similar measurements,
+and/or a pilot study.
+
+It is certainly a lot easier to talk about the ratio of
+(1) and (2), as Cohen does, rather than the two
+quantities separately.  But it is not good science.
+
+For more discussion, see my article in a refereed
+publication of the American Statistical Association:
+
+Lenth, R.V. (2001), "Some Practical Considerations for
+Effective Sample Size Determination," The American
+Statistician, 55, 187-193.

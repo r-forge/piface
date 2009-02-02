@@ -1,0 +1,65 @@
+This dialog provides for sample-size determination for
+estimating a mean to within a specified margin of error, for
+either a finite population of specified size, or an infinite
+population (or sampling with replacement).
+
+The confidence interval is of the form y-bar +/- ME, where
+y-bar is the sample mean and ME is the margin of error:
+
+    ME = t * s / sqrt(n)                (infinite pop)
+
+    ME = t * s * sqrt{(1 - n/N) / n}    (finite pop)
+
+where t is a critical value from the t distribution, s is
+the sample SD, n is the sample size, and N is the population
+size.
+
+USING THE GRAPHICAL INTERFACE
+The dialog is designed such that a sample size n is computed
+whenever you change any of the other input values.  If you
+change n, a new ME is computed (using sigma in place of s in
+the above formulas).
+
+Finite population
+If "Finite population" is checked, calculations are based on
+the population size N entered in the adjacent input field.
+If the box is unchecked, the "N" field is hidden, and
+calculations are based on an infinite population.
+
+Confidence
+Choose the desired confidence coefficient for the ME.  This
+determines the value of t.
+
+Sigma
+Enter your best guess at the population SD (based on
+historical or pilot data).  For a finite population, sigma^2
+is defined as the sum of squared deviations from the
+population mean, divided by N-1.
+
+Margin of Error
+Enter the target value of the margin of error here.  Note
+that the actual value achieved after you collect the data
+will be more or less than this amount, because it will be
+based on s (estimated from the data) rather than sigma.
+
+n
+Enter the sample size here if you want to see what margin of
+error is achieved with that size sample.  When you change n,
+it is rounded to the nearest integer; otherwise, n is not
+rounded
+
+
+Note on sliders
+Sliders may be varied by clicking or dragging along the
+center of the scale.  If you drag along at the level of the
+tick labels, you can change the endpoints of the scale.  The
+small button at the upper right of each slider converts it
+to and from a keyboard-input mode.  In that mode, you can
+also change the scale endpoints and number of digits
+displayed.
+
+Graphics
+A simple graphics facility is available from the Options
+menu.  Enter the variables for the x and y axes, and the
+range of values for the x variable.  More information is
+available through the graphics dialog's help menu.

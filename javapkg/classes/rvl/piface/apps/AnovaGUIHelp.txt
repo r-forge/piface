@@ -1,0 +1,81 @@
+ANOVA POWER ANALYSIS
+
+The user interface uses sliders that are convertible
+to text input; see the Help menu item "GUI Help" for 
+more information.  Basic layout is as follows:
+
+Left panel
+    This is used to vary the numbers of factor levels,
+    and whether each factor is fixed or random.
+
+Right panel(s)
+    Here, we specify the effect size (quantified as 
+    the SD) for each term in the model, and observe
+    the power of the F test for an effect of that size.
+    (If you change the power, the effect size is set to
+    that which achieves that power.)  At the bottom
+    is a selector for specifying the size of all tests.
+
+Options menu
+  Graph 
+    Provides for simple graphics output based on the values
+    in the dialog.  It "plays" the dialog for the values 
+    you specify, and plots the results.
+    
+  Contrasts/Comparisons
+    Creates a companion dialog for studying comparisons or
+    contrasts among levels of the fixed effects, and links
+    parameter values so that they stay in correspondence.
+    
+  Show EMS
+    Displays the expected mean squares (unrestricted model)
+    for the ANOVA associated with this model.
+    
+  Report
+    Generates a report for the current settings of factor 
+    levels, fixed/random, etc.
+
+  Quit
+    Close the dialog and all of its dependents.
+
+
+SOME DETAILS
+
+THE "UNRESTRICTED MODEL" is currently used in all
+power calculations.  This means that any mixed effects
+are modeled as independent normal random variables.
+Maybe some day the restricted model will be supported.
+
+EFFECT SIZE is measured by the SD of the effects in the
+ANOVA model.  In the case of a random effect, the SD^2
+is its variance component.  In the case of a fixed effect, 
+the SD^2 is defined as the sum of the squares of the
+effects, divided by the degrees of freedom.  For example,
+consider a two-way fixed-effects model:
+
+    Y_{ijk} = mu + a_i + b_j + ab_{ij} + E_{ijk}
+
+where i = 1,2,...,A, j=1,2,...,B, k=1,2,...n, with the
+usual constraints that sum a_i = sum b_j = sum_i ab_{ij}
+= sum_j ab_{ij} = 0.  Then the effect sizes are:
+
+    SD^2(a) = sum_i  a_i^2 / (A-1)
+    
+    SD^2(b) = sum_j  b_j^2 / (B-1)
+    
+    SD^2(ab) = sum_i sum_j  ab_{ij}^2 / [(A-1)(B-1)]
+
+Some people prefer the cell-means model:
+
+    Y_{ijk} = mu_{ij} + E_{ijk}
+
+in which case
+
+    SD^2(a) = sum_i (mu_{i.} - mu_{..})^2 / (A-1)
+
+    SD^2(b) = sum_j (mu_{.j} - mu_{..})^2 / (B-1)
+    
+    SD^2(ab) = sum_i sum_j  (mu_{ij} - mu_{i.} - mu_{.j} 
+                   + mu_{..})^2 / [(A-1)(B-1)]
+
+where any subscript of "." indicates averaging.

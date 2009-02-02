@@ -1,0 +1,7 @@
+This dialog provides for power analysis of a one-sample
+test of proportions.  You have your choice of the normal
+approximation, the beta approximation (which is more
+accurate), or an exact calculation based on the binomial
+distribution.  In the latter case, the size of the test
+is often much smaller than the stated significance level.
+

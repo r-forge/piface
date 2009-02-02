@@ -1,0 +1,82 @@
+This dialog provides for power analysis of a two-sample t
+test or a two-sample t test of equivalence.  If the "equal
+SDs" box is checked, then the pooled t test is used;
+otherwise, the calculations are based on the Satterthwaite
+approximation.
+
+You have three choices for sample-size allocation.
+"Independent" lets you specify n1 and n2 separately;
+"Equal" forces n1 = n2; and "Optimal" sets the ratio
+n1/n2 equal to sigma1/sigma2 (which minimizes the
+SE of the difference of the sample means).
+
+You have a choice between using power or ROC area as the
+criterion for deciding sample size (see the section below
+on ROC area for additional explanation).
+
+You may choose whether to solve for effect size or
+sample size when you click on the "Power" (or "ROC
+area") slider.  The current values are scaled upward or
+downward to make the power come out right, while
+preserving (at least approximately) the ratio of the
+two SDs or two ns.
+
+To study a test of equivalence, check the "Equivalence"
+checkbox.  A "Threshold" window will appear for entering
+the negligible difference of means.  An equivalence test
+is a test of the hypotheses H0: |mu1 - mu2| >= threshold
+versus H1: |mu1 - mu2| < threshold.  The test is done by
+performing two one-sided t tests:
+
+    H01: mu1 - mu2 <= -threshold  vs. H11: > -threshold
+    H02: mu1 - mu2 >= threshold   vs. H12: < threshold
+
+Then H0 is rejected only if both H01 and H02 are rejected.
+If both tests are of size alpha, then the size of the
+two tests together is at most alpha -- that's because
+H01 and H02 are disjoint.  Another way to look at this
+test is to construct a 100(1 - 2*alpha) percent CI for
+(mu1 - mu), and reject H0 if this interval lies entirely
+inside the interval [-threshold, +threshold].
+
+Options menu
+"Use integrated power" is an experimental enhancement.
+Consider the plot of power versus alpha; integrated power
+is the area under that curve.  (This curve is also known as
+the ROC - receiver operating characteristic - curve.)  The
+integrated power, or area under the ROC curve, is the
+average power over all possible values of alpha
+(therefore, it does not depend on alpha).
+
+Integrated power has the following useful interpretation:
+Consider two hypothetical studies of identical size and
+design.  Suppose that in one of them, there is no
+difference between the means, and in the other, the
+difference is the value specified in the dialog.  We
+compute the t statistic in each study.  Then the
+integrated power is the probability that the t statistic
+for the second (non-null) study is "more significant" than
+the one from the null study.  That is, it is the chance
+that we will correctly distinguish the null and non-null
+studies. The lowest possible integrated power is .5 except
+in unreasonable situations (such as using a right-tailed
+test when the difference is negative).
+
+An advantage of using integrated power instead of power is
+that it doesn't require you to specify the value of alpha
+(so the "alpha" widget disappears when you select the
+integrated power method). Also, it is somewhat removed
+from the trappings of hypothesis testing, in that in the
+above description, the t statistic is only used as a
+measure of effect size, not as a decision rule.  This may
+make it more palatable to some people (please tell me what
+you think!)  A suggested target integrated power is 0.95 -
+roughly comparable to a power of .80 at alpha = .05.
+
+The above description of integrated power is for a regular
+t test, as opposed to an equivalence test.  In an
+equivalence test, the analogous definition and
+interpretation applies, but in cases where the threshold
+is too small relative to sigma1 and sigma2, the power
+function is severely bounded and this can make the
+integrated power less than .5.

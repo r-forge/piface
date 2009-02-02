@@ -1,0 +1,2 @@
+# Make 'src-files' (All java sources)
+ls -R src | awk '/:/{gsub(/:/,"/");pfx=$0;next}{print pfx $0}' | grep java > src-files

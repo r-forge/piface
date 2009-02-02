@@ -1,0 +1,20 @@
+This dialog provides rudimentary help for planning a pilot
+study for estimating an error SD (sigma).  If the pilot
+study is too small, the estimate could be way too small,
+causing us to seriously underestimate the required sample
+size (N) for the main study.
+
+Thus, the criterion employed in this dialog is the risk of
+underestimating N by a specified percentage 100*P.  This
+is approximately equal to the risk of underestimating
+sigma (pretty much regardless of what criterion -- power,
+CI width, etc. -- is used for sample-size determination).
+In a normal setting, this risk is a simple calculation on
+the chi-square distribution: risk = Pr{Q < (1-P)nu}, where
+Q is chi-square with nu d.f.
+
+The dialog has three sliders -- for 100P, for risk, and
+for nu.  If you vary P or nu, the risk is recomuted based
+on the above formula.  If you vary risk, nu is recomputed.
+(If the solve method fails, simply set the d.f. so the
+risk is in the ballpark, and try again.)

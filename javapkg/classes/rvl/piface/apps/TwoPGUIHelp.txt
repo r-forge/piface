@@ -1,0 +1,24 @@
+This dialog provides approximate power computations 
+for a two-sample comparison of proportions.  The 
+normal approximation is used.
+
+The test statistic considered is
+
+    Z = (ph1 - ph2) / sqrt{pbar(1-pbar)(1/n1 + 1/n2)}
+
+where ph1 and ph2 are estimates of p1 and p2 based
+on n1 and n2 trials, and 
+
+    pbar = (n1*ph1 + n2*ph2) / (n1 + n2)
+
+If the continuity correction is used, the numerator is
+decreased in absolute value by .5 * (1/n1 + 1/n2)
+(at most).
+
+Under the null hypothesis, Z is taken to be N(0,1).
+Under the alternative hypothesis, the variance of Z is
+not equal to 1 because then p1 and p2 are not averaged.
+
+Note: For numerical stability, the ranges of p1 and p2
+are limited so that min[n1p1, n1(1 - p1)] >= 5 and
+min[n2p2, n2(1 - p2)] >= 5.

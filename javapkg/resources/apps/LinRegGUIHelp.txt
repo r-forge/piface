@@ -1,0 +1,56 @@
+Linear regression dialog
+
+This is a simple interface for studying power and sample-
+size problems for simple or multiple linear regression
+models.  It is designed to study the power of testing one
+predictor, x[j], in the presence of other predictors.
+The power of the t test of a regression coefficient
+depends on the error SD, the SD of the predictor itself,
+and the multiple correlation between that predictor and
+other predictors in the model.  The latter is related to
+the variance inflation factor.  It is assumed that the
+intercept is included in the model.
+
+The components in the dialog are as follows:
+
+No. of predictors: Enter the total number of predictors
+(independent variables) in the regression model.
+
+SD of x[j]: Enter the standard deviation of the values of
+the predictor of interest.
+
+VIF[j]: (This slider appears only when there is more than
+one predictor.)  Enter the variance-inflation factor for
+x[j].  In an experiment where you can actually control
+the x values, you probably should use an orthogonal
+design where all of the predictors are mutually
+uncorrelated -- in which case all the VIFs are 1.
+Otherwise, you need some kind of pilot data to understand
+how the predictors are correlated, and you can estimate
+the VIFs from an analysis of those data.
+
+Alpha: The desired significance level of the test.
+
+Two-tailed: Check or uncheck this box depending on
+whether you plan to use a two-tailed or a one-tailed
+test.  If it is one-tailed, it is assumed right-tailed.
+If a left-tailed test is to be studied, reverse the signs
+and think in terms of a right-tailed test.
+
+Error SD: The SD of the errors from the regression model.
+You likely need pilot data or some experience using the
+same measurement instrument.
+
+Detectable beta[j]: The clinically meaningful value of
+the regression coefficient that you want to be able to
+detect.
+
+Sample size: The total number of observations in the
+regression dataset.  This is forced to be at least 2
+greater than the number of predictors.
+
+Power: The power of the t test, at the current settings
+of thre parameter values.
+
+Solve for: Determines what parameter is solved for when
+you change the value of the Power slider.
