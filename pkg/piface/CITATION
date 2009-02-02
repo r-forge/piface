@@ -1,0 +1,14 @@
+citHeader("To cite piface in publications, please use:")
+ 
+citEntry(entry="Article",
+         title = "Some Practical Guidelines for Effective Sample Size Determination",
+         author = personList(as.person("Russell V. Lenth")),
+         year = 2001,
+         journal = "American Statistician",
+         volume = "55/3",
+         pages = "187--193",
+         textVersion = 
+         paste("Lenth, Russell V.,
+               "Some Practical Guidelines for Effective Sample Size Determination",
+               "American Statistician, 55, 3, pp. 187--193")
+)

@@ -1,0 +1,14 @@
+Package: piface
+Type: Package
+Title: Java Applets for Power and Sample Size
+Version: 0.1-0
+Date: 2009-01-30
+Author: Russell Lenth, R package interface by Tobias Verbeke
+Maintainer: Russell Lenth <russell-lenth@uiowa.edu>
+Description: R package containing Russ Lenth's Java Applets for
+  Power and Sample Size
+URL: http://www.stat.uiowa.edu/~rlenth/Power
+License: GPL-3
+SystemRequirements: Java
+Depends: rJava
+LazyData: yes
