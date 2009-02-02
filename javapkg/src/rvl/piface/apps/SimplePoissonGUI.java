@@ -73,7 +73,8 @@ public class SimplePoissonGUI extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new SimplePoissonGUI();
+        SimplePoissonGUI app = new SimplePoissonGUI();
+        app.setStandalone(true);
     }
 
 }

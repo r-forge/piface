@@ -79,7 +79,8 @@ public class TwoPGUI extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new TwoPGUI();
+        TwoPGUI app = new TwoPGUI();
+        app.setStandalone(true);
     }
 
 }

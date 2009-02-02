@@ -57,7 +57,8 @@ public class Pilot extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new Pilot();
+        Pilot app = new Pilot();
+        app.setStandalone(true);
     }
 
 }

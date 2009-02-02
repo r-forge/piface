@@ -54,7 +54,8 @@ public class RetroPower extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new RetroPower();
+        RetroPower app = new RetroPower();
+        app.setStandalone(true);
     }
 
 }

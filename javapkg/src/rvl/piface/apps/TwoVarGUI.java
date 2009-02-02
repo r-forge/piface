@@ -71,7 +71,8 @@ public class TwoVarGUI extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new TwoVarGUI();
+        TwoVarGUI app = new TwoVarGUI();
+        app.setStandalone(true);
     }
 
 }

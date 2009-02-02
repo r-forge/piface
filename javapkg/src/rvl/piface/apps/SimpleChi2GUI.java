@@ -64,7 +64,8 @@ public class SimpleChi2GUI extends Piface {
  * The following code makes it self-standing...
  */
     public static void main(String argv[]) {
-        new SimpleChi2GUI();
+        SimpleChi2GUI app = new SimpleChi2GUI();
+        app.setStandalone(true);
     }
 
 }

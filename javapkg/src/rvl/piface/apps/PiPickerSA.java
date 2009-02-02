@@ -15,7 +15,7 @@ import java.io.*;
 public class PiPickerSA extends Piface {
 
     private static String
-	appList = "PiPicker.txt",  // file name of application info
+    appList = "PiPicker.txt",  // file name of application info
         title = "Piface Application Selector";          // title of the dialog
 
     public int sel;       // index of selected application
@@ -28,8 +28,8 @@ public class PiPickerSA extends Piface {
  */
     public void gui () {
         Properties pl = new Properties();
-	Vector labels = new Vector();
-	classes = new Vector();
+    Vector labels = new Vector();
+    classes = new Vector();
          try {
             InputStream in = getClass().getResourceAsStream(appList);
             pl.load(in);
@@ -45,19 +45,19 @@ public class PiPickerSA extends Piface {
         catch (IOException ioe) {
             Utility.error(ioe);
         }
-	catch(Exception e) {
-	    Utility.error(e);
-	}
-	int nc = labels.size();
+    catch(Exception e) {
+        Utility.error(e);
+    }
+    int nc = labels.size();
         String choices[] = new String[nc];
-	for (int i=0; i<nc; i++) 
-	    choices[i] = (String) labels.elementAt(i);
-	label ("Type of analysis");
-	choice ("sel", "", choices, 0);
-	beginSubpanel(2);
-	    label("                           ");
+    for (int i=0; i<nc; i++)
+        choices[i] = (String) labels.elementAt(i);
+    label ("Type of analysis");
+    choice ("sel", "", choices, 0);
+    beginSubpanel(2);
+        label("                           ");
             button ("runSelApp", "Run dialog");
-	endSubpanel();
+    endSubpanel();
     }
 
     protected void afterSetup() {
@@ -75,7 +75,7 @@ public class PiPickerSA extends Piface {
  * Default event handler
  */
     public void click () {
-	// (do nothing)
+    // (do nothing)
     }
 
 /**
@@ -99,9 +99,10 @@ public class PiPickerSA extends Piface {
         super (title);
     }
     public static void main(String argv[]) {
-	if (argv.length > 0)  appList = argv[0];
+    if (argv.length > 0)  appList = argv[0];
 
-        new PiPickerSA();
+        PiPickerSA ppsa = new PiPickerSA();
+        ppsa.setStandalone(true);
         new AboutPiface();
     }
 

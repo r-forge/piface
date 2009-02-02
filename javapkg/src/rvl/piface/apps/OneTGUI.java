@@ -82,7 +82,8 @@ public class OneTGUI extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new OneTGUI();
+        OneTGUI app = new OneTGUI();
+        app.setStandalone(true);
     }
 
 }

@@ -30,7 +30,8 @@ public class XXXX extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new XXXX();
+        XXXX app = new XXXX();
+        app.setStandalone(true);
     }
 
 }

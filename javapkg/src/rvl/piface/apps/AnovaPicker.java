@@ -89,7 +89,7 @@ public class AnovaPicker extends Piface {
         endSubpanel();
         repFld.addActionListener(this);
         menuItem("localHelp", "How to use this dialog", helpMenu);
-	preDef_changed();
+    preDef_changed();
     }
 
     protected void afterSetup() {
@@ -156,7 +156,8 @@ public class AnovaPicker extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new AnovaPicker();
+        AnovaPicker app = new AnovaPicker();
+        app.setStandalone(true);
     }
 
 /**

@@ -44,9 +44,10 @@ import rvl.piface.*;
 public abstract class Piface extends Frame
     implements ActionListener, WindowListener, rvl.util.Closeable
 {
-    public static final String version = "1.66 - 28 August 2008";
+    public static final String version = "1.67 - 2 February 2009";
     private Stack subpanels = new Stack();
     private Component master = null;
+    private boolean standalone = false;      // if true, will do System.exit when closed
     public double javaVersion = 1.0;
 
     protected Vector
@@ -209,7 +210,7 @@ public abstract class Piface extends Frame
             pil.close();
         }
         dispose();
-        if (master==null)
+        if (standalone)
             System.exit(0);
     }
 
@@ -1150,6 +1151,12 @@ public abstract class Piface extends Frame
 * If master is null, close() calls System.exit; otherwise,
 * it is assumed that the master will take care of the problem
 * if it's all that fatal.
+*
+* RVL 2-2-09:
+* I think this setMaster and getMaster stuff is not used anymore,
+* Instead I use a new boolean 'standalone' that is meant to
+* be set true only if you actually *want* it to exit when closed
+* but I'm leaving it in for now just
 */
     public void setMaster(Component p) {
         master = p;
@@ -1161,7 +1168,15 @@ public abstract class Piface extends Frame
         return master;
     }
 
-
+/**
+ * Make this a standalone app if <code>true</code>.
+ * That means that when you quit, it will exit
+ * using <code>System.exit(0)</code>.
+ * If not called, we are not in standalone operation.
+ */
+    public void setStandalone(boolean flag) {
+        standalone = flag;
+    }
 
 // ===== EVENT HANDLERS =====
 

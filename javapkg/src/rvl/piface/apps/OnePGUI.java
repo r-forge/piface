@@ -132,11 +132,12 @@ public class OnePGUI extends Piface {
 /**
  * The following code makes it self-standing...
  */
-        public OnePGUI() {
-                super(title);
-        }
-        public static void main(String argv[]) {
-                new OnePGUI();
-        }
+    public OnePGUI() {
+        super(title);
+    }
+    public static void main(String argv[]) {
+        OnePGUI app = new OnePGUI();
+        app.setStandalone(true);
+    }
 
 }

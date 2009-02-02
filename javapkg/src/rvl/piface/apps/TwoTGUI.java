@@ -201,7 +201,8 @@ public class TwoTGUI extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new TwoTGUI();
+        TwoTGUI app = new TwoTGUI();
+        app.setStandalone(true);
     }
 
 }

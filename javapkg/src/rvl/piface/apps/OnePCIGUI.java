@@ -80,7 +80,8 @@ public class OnePCIGUI extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new OnePCIGUI();
+        OnePCIGUI app = new OnePCIGUI();
+        app.setStandalone(true);
     }
 
 }

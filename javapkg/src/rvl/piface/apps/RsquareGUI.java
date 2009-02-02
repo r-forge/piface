@@ -51,7 +51,8 @@ public class RsquareGUI extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new RsquareGUI();
+        RsquareGUI app = new RsquareGUI();
+        app.setStandalone(true);
     }
 
 }

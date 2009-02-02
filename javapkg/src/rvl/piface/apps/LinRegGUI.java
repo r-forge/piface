@@ -97,7 +97,8 @@ public class LinRegGUI extends Piface {
         super(title);
     }
     public static void main(String argv[]) {
-        new LinRegGUI();
+        LinRegGUI app = new LinRegGUI();
+        app.setStandalone(true);
     }
 
 }

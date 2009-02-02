@@ -61,8 +61,8 @@ public class AnovaHelper extends Piface
         //---- Two-way card
             panel = new PiPanel(new RVLayout(1, true, true));
             cardPanel.add("2wayPanel", panel);
-	    // Add panel BEFORE calling setStretchable(),
-	    // since it has to pass "stretchable" attribute on to parents
+        // Add panel BEFORE calling setStretchable(),
+        // since it has to pass "stretchable" attribute on to parents
             panel.setStretchable(true);
 
             facName = new String[]{"",""};
@@ -488,6 +488,7 @@ public class AnovaHelper extends Piface
     public static void main(String argv[]) {
         AnovaGUI ag = new AnovaGUI("Test of AnovaHelper", "row | col | trt",
             10, "row 5 col 3 trt 4", "");
+        ag.setStandalone(true);
         ag.linkHelper();
     }
 
