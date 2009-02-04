@@ -1,0 +1,25 @@
+Things to do on the Java side...
+
+-- Fix 7 warnings relating to varargs objects that come up when compiling
+to a 1.5 target. DONE 4 Feb 2009
+
+-- Fix 39 warnings observed using -Xlint:unchecked.  These have to do
+with potentially unsafe operations that can be made safe via appropriate
+generic declarations now available in Java 1.5. 
+
+-- Fix 100 warnings observed using -Xlint:deprecated.
+These have to do with using Java 1.1 methods such as show() instead
+of setVisible(true).
+
+-- Create a branch for the standalone version (that will run without R)
+and where the current source files for rvl.stat.dist will go.  Replace 
+most of the stuff in rvl.stat.dist with equivalent calls to R functions, 
+via JRI.  Henceforth, we'll make piface.jar using the standalone
+branch and Rpiface.jar using the trunk.
+
+-- Modernize the GUI components to use swing rather than old awt.
+
+-- Modernize the help files to HTML format and revise help facility
+to display them using that toolkit.
+
+-- Lots more to consider once the above are addressed.

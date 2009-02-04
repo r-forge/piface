@@ -50,7 +50,7 @@ public class FunctionPointer extends UniFunction {
     public double of (double x) {
         try {
             return ((Double)meth.invoke(obj,
-                new Double[] { new Double(x) })).doubleValue();
+                (Object[])(new Double[] { new Double(x) }))).doubleValue();
         }
         catch (Exception e) {
             Utility.warning("Error in FunctionPointer: " + e);

@@ -512,8 +512,8 @@ public abstract class Piface extends Frame
  */
     public void callMethod(String methodName) {
         try {
-            Method handler = getClass().getMethod(methodName, null);
-            handler.invoke(this, null);
+            Method handler = getClass().getMethod(methodName, (Class<?>[])null);
+            handler.invoke(this, (Object[])null);
         }
         catch (InvocationTargetException ite) {
             errmsg("callMethod(\"" + methodName + "\")", ite.toString(), false);
@@ -542,8 +542,8 @@ public abstract class Piface extends Frame
             sourceIndex = -1;
         }
         try {
-            Method handler = getClass().getMethod(actionSource + "_changed", null);
-            handler.invoke(this, null);
+            Method handler = getClass().getMethod(actionSource + "_changed", (Class<?>[])null);
+            handler.invoke(this, (Object[])null);
         }
         catch (NoSuchMethodException nsme) {
             click();

@@ -28,7 +28,7 @@ public class NumAnal {
             return Utility.NaN("integral(): too many function calls");
         try {
             return ((Double)fMethod.invoke(caller,
-                new Double[] { new Double(x) })).doubleValue();
+                (Object[])(new Double[] { new Double(x) }))).doubleValue();
         }
         catch (Exception e) {
             Utility.warning("Error in f(): " + e);
@@ -47,7 +47,7 @@ public class NumAnal {
             double y = AA + BB * x / (1 - x),
                 dy = BB / (1 - x) / (1 - x),
                 fy = ((Double)gMethod.invoke(gCaller,
-                    new Double[] { new Double(y) })).doubleValue();
+                    (Object[])(new Double[] { new Double(y) }))).doubleValue();
             return fy * dy;
         }
         catch (Exception e) {
