@@ -1,0 +1,17 @@
+Retrospective or "observed" power is defined as the power
+of the test just performed, based on the observed effect
+size and the same sample size and significance level.  
+
+It is a useless exercise -- see Hoenig and Heisey (2001),
+"The Abuse of Power: The Pervasive Fallacy of Power Calcu-
+lations for Data Analysis", The American Statistician, 55, 
+19-24.
+
+This user interface is based on the fact that power is the 
+probability of rejecting the null hypothesis.  Retrospec-
+tively, the outcome of the test is known; hence if we use 
+*all* available information, the retrospective power is 1 
+if the test was significant, and 0 otherwise.  
+
+This formulation of retrospective power is easy to calcu-
+late, and impossible to abuse.

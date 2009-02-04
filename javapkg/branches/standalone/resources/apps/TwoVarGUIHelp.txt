@@ -1,0 +1,22 @@
+This dialog provides approximate power computations 
+for a two-sample comparison of variances, assuming
+independent random samples from normal populations,
+and that the F ratio, F = (s1/s2)^2 is used as the
+test statistic, where s1 and s2 are the sample SDs.
+
+The sample sizes are inputted as n1 and n2.  The
+"equal ns" checkbox forces them to be equal when
+checked.
+
+The variances to be compared are inputted via the
+sliders for Variance 1 and Variance 2.  Use the
+drop-down list to specify the alternative hypothesis
+interest.  (The null hypothesis in all cases is that
+Var1 = Var2.).  Use the alpha slider to set the
+desired sugnificance level for the test.
+
+The power slider displays the power of the test for
+the current parameter settings.  This slider is not 
+clickable.  To determine, say, the sample size for a
+given power, vary n1 and/or n2 until the desired
+power is achieved.

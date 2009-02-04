@@ -1,0 +1,11 @@
+This dialog provides for power analysis of a one-sample
+t test or a pooled t test.  The effect size is the
+difference between the null and the target mean (in the
+one-sample test), or the mean difference of the pairs
+(in the paired t test).
+
+You may choose whether to solve for effect size or
+sample size when you click on the "Power" slider.  The
+current values are scaled upward or downward to make
+the power come out right, while preserving (at least
+approximately) the ratio of the two SDs or two ns.

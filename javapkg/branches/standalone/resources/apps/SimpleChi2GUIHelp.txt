@@ -1,0 +1,13 @@
+This dialog provides rudimentary power analysis of a
+chi-square test.  Using prototype data of sample size n*,
+compute the chi-square statistic Chi2*.  Enter n* and
+Chi2* in the windows provided; these define the effect
+size to use in the power calculations.
+
+The prototype data should be fake data constructed to
+reflect the effect size of clinical or scientific
+importance.  Use the analysis you plan to do on these
+fake data to obtain the chi-square value Chi2* for the
+dialog.  The prototype data should include the expected
+frequencies (or whatever), but should not include random
+fluctuations.

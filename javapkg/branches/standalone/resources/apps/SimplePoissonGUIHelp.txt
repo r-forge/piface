@@ -1,0 +1,32 @@
+This dialog provides rudimentary power analysis for an
+exact test of a Poisson parameter.  Specifically, our data
+are assumed to be x_1, x_2, ..., x_n iid Poisson(lambda),
+so that x = sum{x_i} is Poisson with mean n*lambda serves
+as the test statistic.  The critical value(s) for x are
+obtained using quantiles of the null Poisson distribution
+so as to cut off tail(s) of probability less than or equal
+to alpha.  The power of the test is then the probability
+of the critical region, computed from a Poisson
+distribution with the specified value of lambda.
+
+The GUI components are as follows:
+
+lambda0: The value of the Poisson parameter under the
+null hypothesis.
+
+alternative: Choose a two-tailed alternative (lambda != 
+lambda0) or one of the one-tailed alternatives.
+
+Boundaries of acceptance region (output values):  These
+are the lower and/or upper values of x for which the null
+hypothesis would NOT be rejected.
+
+size (output value):  The actual probability of the
+critical region under the null hypothesis.
+
+lambda: The Poisson parameter at which the power is to be
+calculated.
+
+n: The sample size.
+
+power: The probability of the critical region, given lambda and n.
