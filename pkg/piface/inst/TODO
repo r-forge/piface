@@ -1,16 +1,6 @@
 TODO list for piface package
 
 o write Makefile / ant script to automate build of the jar and copy it to inst/java
-
-o fix bug that makes R hang when quitting a menu and launching piface() again;
-  upon closing the piface window (in ESS), the following message appears
-  
-  Java requested System.exit(0), closing R.
-
-  Process R finished at Sat Jan 31 21:42:15 2009
-
-  Maybe a version of piface can be compiled that replaces the System.exit(0) with
-  something more appropriate for its used embedded in an R package ?
   
 o add more dialogs to immediately navigate to a particular design
 
