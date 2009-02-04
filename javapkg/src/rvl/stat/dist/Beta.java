@@ -33,7 +33,7 @@ public class Beta {
             return x;
         }
 
-        factor = Math.pow(x,a) * Math.pow(1-x,b) * MoreMath.beta(a,b);
+        factor = Math.pow(x,a) * Math.pow(1-x,b) / MoreMath.beta(a,b);
 
         if (a < 1.5) {
             decr_a = true;
@@ -116,7 +116,7 @@ public class Beta {
             sum=ix;
 
         else {
-            gam = Math.pow(x,a) * Math.pow(1-x,b) * MoreMath.beta(a,b) / a;
+            gam = Math.pow(x,a) * Math.pow(1-x,b) / MoreMath.beta(a,b) / a;
             lambda /= 2;
             q = Math.exp(-lambda);
             p = 1 - q;
@@ -186,7 +186,7 @@ public class Beta {
             c += d;
             d *= (a + k) / x / (a + k + b - 1);
             f += p * c;
-	    p *= k / lambda;
+        p *= k / lambda;
         }
 
         return (f);

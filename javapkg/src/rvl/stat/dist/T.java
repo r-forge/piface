@@ -42,7 +42,7 @@ public class T {
         a = 0.5;
         b = a * df;
         ixodd = Beta.cdf (x, a, b);
-        gamodd = 2 * MoreMath.beta(a,b) * Math.pow(x,a) * Math.pow(1-x,b);
+        gamodd = 2 * Math.pow(x,a) * Math.pow(1-x,b) / MoreMath.beta(a,b);
         if (Math.abs(delta) > 1e-8) {
             gameven = Math.pow(1-x, b);
             ixeven = 1 - gameven;
