@@ -47,5 +47,7 @@ echo $contents; } ?>
 
 <p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
 
+<p> For Java development using these classes, refer to their
+<a href=javadoc/index.html>javadoc pages</a>
 </body>
 </html>
