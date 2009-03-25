@@ -1,0 +1,19 @@
+This dialog provides a simple online-tables
+capability for common distributions.  Use the
+drop-down list to choose the distribution,
+and set the desired parameter values in the
+right-hand panel.
+
+In the left panel, we set the value of x and
+observe the value of the cdf, F(x) (or 1 - F(x) 
+if "right tail" is checked).  If you change the
+value of F(x), then x is set to the corresponding 
+quantile of the distribution.  (In the case of
+the binomial and Poisson, only certain discrete
+values of F(x) may occur.)
+
+Fractional degrees of freedom are supported for
+the t, F, and chi-square distributions.  Noncentral
+versions of these distributions are available by
+setting the noncentrality parameter 'ncp'.  For
+ordinary central distributions, set ncp = 0.

@@ -5,7 +5,9 @@
 package=rvl.piface.apps
 
 # Classes, in the order desired for listing:
-keys=OnePCIGUI,OnePGUI,TwoPGUI,OneTCIGUI,OneTGUI,TwoTGUI,LinRegGUI,AnovaPicker,TwoVarGUI,RsquareGUI,SimpleChi2GUI,SimplePoissonGUI,Pilot
+keys=OnePCIGUI,OnePGUI,TwoPGUI,OneTCIGUI,OneTGUI,TwoTGUI,\
+     LinRegGUI,AnovaPicker,TwoVarGUI,RsquareGUI,\
+     SimpleChi2GUI,SimplePoissonGUI,CDFcalc,Pilot
 
 # Description strings for each class
 OnePCIGUI=CI for one proportion
@@ -20,4 +22,5 @@ TwoVarGUI=Two variances (F test)
 RsquareGUI=R-square (multiple correlation)
 SimpleChi2GUI=Generic chi-square test
 SimplePoissonGUI=Generic Poisson test
+CDFcalc=Online tables of common distributions
 Pilot=Pilot study

@@ -41,6 +41,7 @@ src/rvl/piface/apps/AnovaCompGUI.java
 src/rvl/piface/apps/AnovaGUI.java
 src/rvl/piface/apps/AnovaHelper.java
 src/rvl/piface/apps/AnovaPicker.java
+src/rvl/piface/apps/CDFcalc.java
 src/rvl/piface/apps/LinRegGUI.java
 src/rvl/piface/apps/OnePCIGUI.java
 src/rvl/piface/apps/OnePGUI.java
