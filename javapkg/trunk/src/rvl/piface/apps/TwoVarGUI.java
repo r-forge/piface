@@ -58,6 +58,10 @@ public class TwoVarGUI extends Piface {
         double alp = alt==1 ? Alpha/2 : Alpha,
             critval = F.quantile(1 - alp, df1, df2);
         Power = 1 - F.cdf(critval/ratio, df1, df2);
+        if (alt==1) {
+            critval = F.quantile(1 - alp, df2, df1);
+            Power += 1 - F.cdf(critval*ratio, df2, df1);
+        }
     }
 
     public void localHelp() {

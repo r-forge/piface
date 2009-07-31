@@ -44,7 +44,7 @@ import rvl.piface.*;
 public abstract class Piface extends Frame
     implements ActionListener, WindowListener, rvl.util.Closeable
 {
-    public static final String version = "1.67 - 2 February 2009";
+    public static final String version = "1.71 - 31 July 2009";
     private Stack subpanels = new Stack();
     private Component master = null;
     private boolean standalone = false;      // if true, will do System.exit when closed
