@@ -204,6 +204,7 @@ public class Model {
         while (st.hasMoreTokens()) {
             getFac(st.nextToken()).setRandom(true);
         }
+        sanityCheck();
     }
 
 /**
@@ -213,6 +214,17 @@ public class Model {
         StringTokenizer st = new StringTokenizer(s);
         while (st.hasMoreTokens()) {
             getFac(st.nextToken()).setRandom(false);
+        }
+    }
+
+/**
+    Check to make sure we have no fixed factors nested in random ones
+    (and correct any violations with a warning message).
+*/
+    public void sanityCheck() {
+        for (int i=0; i<nFac(); i++) {
+            Factor f = getFac(i);
+            f.setRandom(f.isRandom());
         }
     }
 

@@ -49,8 +49,8 @@ public class AnovaCompGUI extends Piface implements PiListener {
 
     private int bonfIndex;  // index of "Bonferroni" choice
     private Component bonfComp,     // the component for bonfDiv
-	famComp,                    // the component for famSize
-	restrComp;                  // the compoent for restr
+    famComp,                    // the component for famSize
+    restrComp;                  // the compoent for restr
     private double vdf[],   // used by reporting facility.
         cv;     // crit value   "   "      "        "
 
@@ -108,9 +108,9 @@ public class AnovaCompGUI extends Piface implements PiListener {
     // save components for bonfDiv and restr
         bonfComp = (Component)getComponent("bonfDiv");
         bonfComp.setVisible(false);
-	famComp = (Component)getComponent("famSize");
-	restrComp = (Component)getComponent("restr");
-	restrComp.setVisible(false);
+    famComp = (Component)getComponent("famSize");
+    restrComp = (Component)getComponent("restr");
+    restrComp.setVisible(false);
 
         menuCheckbox("autoBonf", "Auto Bonferroni", 1);
         menuItem("linkAOV", "ANOVA dialog");
@@ -125,13 +125,17 @@ public class AnovaCompGUI extends Piface implements PiListener {
     public void beforeSetup() {
         n = new double[model.nFac()];
         if (effSD == null) {
-	    effSD = new double[model.nTerm()];
-	    for (int i=0; i<model.nTerm(); i++)
-		effSD[i] = 1.0;
-	}
+            effSD = new double[model.nTerm()];
+            for (int i=0; i<model.nTerm(); i++)
+            effSD[i] = 1.0;
+        }
         int nf = 0, ft = 0;
         for (int i=0; i<model.nTerm(); i++)
             if (!model.getTerm(i).isRandom()) nf++;
+        if (nf == 0) {
+            Utility.error("There are no fixed factors, so no contrasts can be studied", this);
+            return;
+        }
         fixedNames = new String[nf];
         fixedTerms = new Term[nf];
         for (int i=0; i<model.nTerm(); i++)
@@ -193,7 +197,7 @@ public class AnovaCompGUI extends Piface implements PiListener {
                 cv = sqrt((famSize-1)*F.quantile(1-alpha,famSize-1,df));
                 break;
         }
-	famComp.setVisible(cvType > 0);
+    famComp.setVisible(cvType > 0);
         power = 1 - T.cdf(cv, df, delta);
     }
 
@@ -224,21 +228,21 @@ public class AnovaCompGUI extends Piface implements PiListener {
         choice.removeAll();
         choice.add("(no restrictions)");
         restr = 0;
-	if (restrVec.size() < 2) {
-	    restrComp.setVisible(false);
-	}
-	else {
-	    restrComp.setVisible(true);
-	    for (int i=1; i<restrVec.size(); i++) {
-		Factor f[] = (Factor[])restrVec.elementAt(i);
-		String r = "Same ";
-		for (int j=0; j<f.length; j++) {
-		    if (j > 0) r += " and ";
-		    r += f[j].getShortName();
-		}
-		choice.add(r);
-	    }
-	}
+    if (restrVec.size() < 2) {
+        restrComp.setVisible(false);
+    }
+    else {
+        restrComp.setVisible(true);
+        for (int i=1; i<restrVec.size(); i++) {
+        Factor f[] = (Factor[])restrVec.elementAt(i);
+        String r = "Same ";
+        for (int j=0; j<f.length; j++) {
+            if (j > 0) r += " and ";
+            r += f[j].getShortName();
+        }
+        choice.add(r);
+        }
+    }
         setFamSize();
         setBonf();
         click();
@@ -279,17 +283,17 @@ public class AnovaCompGUI extends Piface implements PiListener {
     }
 
     public void linkAOV() {
-		ag = new AnovaGUI(getTitle(), model, effSD);
-		addPiListener(ag);
-		ag.addPiListener(this);
+        ag = new AnovaGUI(getTitle(), model, effSD);
+        addPiListener(ag);
+        ag.addPiListener(this);
         ag.acg = this;
     }
 
     public synchronized void piAction(String varName) {
         if (ignoreActions || ag == null) return;
-		setVar(varName, ag);
-		callMethodFor(varName);
-		updateVars();
+        setVar(varName, ag);
+        callMethodFor(varName);
+        updateVars();
         ag.ignoreActions = true;
         notifyListeners(varName);
         ag.ignoreActions = false;
